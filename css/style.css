@@ -31,12 +31,12 @@ body {
 
 /* ======= NAVBAR ======= */
 
-.hero{
+.hero {
     display: none;
 }
 
 .nav {
-    max-width: 1280px;  
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -54,9 +54,11 @@ body {
     display: flex;
     gap: 48px;
 }
-.cart-items{
+
+.cart-items {
     padding-left: 48px;
 }
+
 .nav-links ul li a {
     text-decoration: none;
     color: black;
@@ -66,52 +68,54 @@ body {
     color: gray;
 }
 
-.cart-items{
+.cart-items {
     list-style: none;
 }
 
 /* ===Banner section======== */
 
-.banner{
+.banner {
     display: grid;
     grid-template-areas: "bannercontent1 bannercontent2";
 
 }
 
-.baner-content1{
+.baner-content1 {
     grid-area: bannercontent1;
     align-content: end;
 }
 
-.baner-content1 h2{
+.baner-content1 h2 {
     font-size: 48px;
 }
 
-.baner-content2{
+.baner-content2 {
     grid-area: bannercontent2;
-    
+
 
 }
-.baner-content2 img{
+
+.baner-content2 img {
     width: 100%;
-    object-fit: cover;;
+    object-fit: cover;
+    ;
 }
 
 /* ==============plants Section==================== */
-.plants-title{
+.plants-title {
     width: 80%;
     text-align: center;
     margin: 0 auto;
     padding-bottom: 2rem;
 }
 
-.gallery{
+.gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
 
-.flower-card img{
+.flower-card img {
     padding-bottom: 1rem;
     width: 100%;
 }
@@ -121,12 +125,12 @@ body {
     color: rgb(61, 61, 61);
 }
 
-.flower-card h4{
+.flower-card h4 {
     padding-left: 0.5rem;
     text-align: center;
 }
 
-.flower-card button{
+.flower-card button {
     margin-top: 1rem;
     width: 100%;
     color: white;
@@ -135,15 +139,53 @@ body {
     padding: 1rem 2rem;
 }
 
+/* Flower Plants section */
+.flower-plants {
+    display: flex;
+    gap: 60px;
+
+}
+.flower-details1{
+    flex: 1;
+    /* position: relative; */
+}
 
 
+.flower-details2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.flower-wrapper ul{
+    padding-left: 1.5rem;
+}
+
+.flower-wrapper h2{
+    font-size: 3rem;
+}
+
+.flower-wrapper p{
+    font-size: 1.2rem;
+    padding-top: 1.5rem;
+}
+
+.badge{
+    margin-top: -100px;
+    margin-left: 380px;
+    width: 280px;
+    /* height: 280px; */
+    position: absolute;
+}
 
 /* =================Responsive For Mobile Device=================== */
 
 @media (max-width: 768px) {
 
     /* ============Hero Content */
-    .hero{
+    .hero {
         display: flex;
         justify-content: space-between;
         padding: 2rem 2rem 0 2rem;
@@ -152,53 +194,64 @@ body {
 
     /* ============================= */
 
-    .margin-x-primary{
+    .margin-x-primary {
         margin: 1rem 1rem;
     }
-    .items{
+
+    .items {
         display: none;
     }
 
     /*  */
-    .banner{
+    .banner {
         display: grid;
-        grid-template-areas: 
-        "bannercontent2"
-        "bannercontent1 ";
-        
+        grid-template-areas:
+            "bannercontent2"
+            "bannercontent1 ";
+
     }
 
     .baner-content1 {
         padding: 28px 16px 28px;
-        
+
     }
 
-    .baner-content1 h2{
+    .baner-content1 h2 {
         font-size: 24px;
-        
+
     }
-    .flower{
+
+    .flower {
         padding-bottom: 1rem;
     }
 
     /* ================================================ */
 
     /* Gallery section */
-    .gallery{
+    .gallery {
         grid-template-columns: 1fr 1fr;
     }
 
+    /* =====flower-plants========== */
 
 
+    .flower-plants {
+        flex-direction: column;
+    
+    }
 
+    .flower-wrapper h2{
+        font-size: 2rem;
+    }
+    
+    .flower-wrapper p{
+        line-height: normal;
+        font-size: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    .badge{
+        display: none;
+    }
+    
 }
-
-
-
-
-
-
-
-
-
-

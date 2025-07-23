@@ -3,12 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Set max width on container, not on all elements */
 body {
     background-color: rgb(239, 250, 246);
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
 }
 
 /* Common Utility Classes */
@@ -71,7 +72,30 @@ body {
 
 /* ===Banner section======== */
 
+.banner{
+    display: grid;
+    grid-template-areas: "bannercontent1 bannercontent2";
 
+}
+
+.baner-content1{
+    grid-area: bannercontent1;
+    align-content: end;
+}
+
+.baner-content1 h2{
+    font-size: 48px;
+}
+
+.baner-content2{
+    grid-area: bannercontent2;
+    
+
+}
+.baner-content2 img{
+    width: 100%;
+    object-fit: cover;;
+}
 
 /* =================Responsive For Mobile Device=================== */
 
@@ -92,6 +116,28 @@ body {
     }
     .items{
         display: none;
+    }
+
+    /*  */
+    .banner{
+        display: grid;
+        grid-template-areas: 
+        "bannercontent2"
+        "bannercontent1 ";
+        
+    }
+
+    .baner-content1 {
+        padding: 28px 16px 28px;
+        
+    }
+
+    .baner-content1 h2{
+        font-size: 24px;
+        
+    }
+    .flower{
+        padding-bottom: 1rem;
     }
 }
 

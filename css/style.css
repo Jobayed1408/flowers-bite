@@ -141,6 +141,7 @@ body {
 }
 
 .flower-card button {
+    font-weight: 800;
     margin-top: 1rem;
     width: 100%;
     color: white;
@@ -283,14 +284,20 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+.latest-img p{
+    text-decoration: underline;
+}
+
 .img1 {
     background-image: url('../assets/deal-bloom.png');
     grid-area: img1;
+
 }
 
 .img2 {
     background-image: url('../assets/deal-zabo.png');
     grid-area: img2;
+    font-size: 36px;
 }
 
 .img3 {
@@ -385,7 +392,7 @@ body {
     /* ============================= */
 
     .margin-x-primary {
-        margin: 1rem 1rem;
+        margin: 2rem 1rem;
     }
 
     .items {
@@ -429,10 +436,13 @@ body {
 
     /* =====flower-plants========== */
 
+    .plants-title{
+        width: 90%;
+    }
 
     .flower-plants {
         flex-direction: column;
-
+        margin-bottom: 100px;
     }
 
     .flower-wrapper h2 {
@@ -476,6 +486,18 @@ body {
             "img3"
             "img2";
         grid-template-columns: 1fr;
+    }
+    .img1, .img2, .img3 {
+        background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1;
+      }
+
+    .latest-img h5,h4{
+        font-size: 24px;
+    }
+
+    .latest-img p{
+        font-size: 24px;
     }
 
     .latest-img>div {

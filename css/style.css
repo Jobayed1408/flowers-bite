@@ -21,6 +21,17 @@ body {
 .logo{
     color: #E95A08;
 }
+.logo-title{
+    font-size: 65px;
+}
+
+.content-and-title h2{
+    font-size: 50px;
+}
+.content-and-title p{
+    font-size: 22px;
+}
+
 .margin-x-primary {
     margin: 0 150px;
 }
@@ -36,6 +47,12 @@ body {
 .color {
     color: black;
 }
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
 
 /* ======= NAVBAR ======= */
 
@@ -69,7 +86,6 @@ body {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: black;
 }
 
 .visited {
@@ -80,35 +96,46 @@ body {
     list-style: none;
 }
 
+.cart-icon {
+    color: black;  
+    background: transparent;
+  }
+  
+
 /* ===Banner section======== */
 
 .banner {
     display: grid;
     grid-template-areas: "bannercontent1 bannercontent2";
+    grid-template-columns: 1fr 1fr;
 
 }
 
 .baner-content1 {
     grid-area: bannercontent1;
     align-content: end;
+    width: 100%;
 }
 
-.baner-content1 h2 {
+/* .baner-content1 h2 {
     font-size: 48px;
-}
+} */
 
 .baner-content2 {
     grid-area: bannercontent2;
-
+    width: 100%;
 
 }
 
 .baner-content2 img {
-    width: 100%;
     object-fit: cover;
+    width: 100%;
 }
 
 /* ==============plants Section==================== */
+.plants{
+    margin-top: 100px;
+}
 .plants-title {
     width: 70%;
     text-align: center;
@@ -123,6 +150,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
+}
+
+.flower-card{
+    width: 100%;
 }
 
 .flower-card img {
@@ -152,8 +183,9 @@ body {
 
 /* Flower Plants section */
 .flower-plants {
+    margin-top: 150px;
     display: flex;
-    gap: 60px;
+    gap:  60px;
 }
 
 .flower-details1 {
@@ -178,19 +210,21 @@ body {
 }
 
 .flower-wrapper h2 {
-    font-size: 3rem;
+    padding-bottom: 1.5rem;
 }
-
-.flower-wrapper p {
-    font-size: 1.2rem;
-    padding-top: 1.5rem;
+.flower-wrapper ul li{
+    padding-bottom: 1rem;
+}
+.flower-wrapper ul li p {
+    line-height: 1.4;
+    
 }
 
 .badge {
-    margin-top: -120px;
-    margin-left: 25%;
+    margin-top: -8rem;
+    margin-left: 27%;
+    z-index: 10;
     width: 15rem;
-    aspect-ratio: 1/1;
     position: absolute;
     filter: drop-shadow(-4px 6px 6px rgba(0, 0, 0, 0.8));
 }
@@ -198,12 +232,11 @@ body {
 /* Join Section */
 
 .join {
+    margin-top: 150px;
     background-image: url(../assets/news-letter-bg.png);
     display: grid;
     place-items: center;
-    /* centers both vertically and horizontally */
     height: 100vh;
-    /* optional: takes full screen height */
     text-align: center;
     background-size: cover;
 }
@@ -217,8 +250,9 @@ body {
 }
 
 .join-content form {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    place-items: center;
 }
 
 .forms input {
@@ -310,27 +344,22 @@ body {
     padding: 50px 0;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 2rem;
 }
 
 .footer-content {
     flex: 1;
-    min-width: 250px;
 }
 
 .footer-content p {
-    font-size: 18px;
-    margin-top: 1rem;
     line-height: 1.6;
 }
 
 .footer-content-middle {
     display: flex;
+    justify-content: space-between;
     flex: 1;
-    gap: 7rem;
     min-width: 250px;
-    flex-wrap: wrap;
 }
 
 .footer-content-middle ul {
@@ -339,13 +368,13 @@ body {
 }
 
 .footer-content-middle ul li {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 .footer-content-middle ul a {
     text-decoration: none;
-    color: #333;
-    font-size: 16px;
+    color: #0000007e;
+    font-size: 22px;
     transition: color 0.3s ease;
 }
 
@@ -357,9 +386,8 @@ body {
     display: flex;
     flex: 1;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 1.5rem;
     min-width: 200px;
-    flex-wrap: wrap;
 }
 
 .footer-content-last img {
@@ -381,13 +409,26 @@ body {
 
 @media (max-width: 768px) {
 
+    /* ======Common======= */
+    .logo-title{
+        font-size:30px;
+    }
+
+    .container{
+        margin: 0 auto; 
+        padding: 1rem;
+    }
+
+
     /* ============Hero Content */
-    .hero {
+    .hero{
         display: flex;
         justify-content: space-between;
         padding: 2rem 2rem 0 2rem;
     }
-
+    .header {
+        padding: 1rem 1rem 0 1rem;
+    }
 
     /* ============================= */
 
@@ -401,11 +442,11 @@ body {
 
     /*  */
     .banner {
-        display: grid;
         grid-template-areas:
             "bannercontent2"
             "bannercontent1 ";
         margin: 0;
+        grid-template-columns: 1fr;
 
     }
 
@@ -419,9 +460,18 @@ body {
 
     }
 
-    .baner-content2 img {
-        padding: 0;
+    .baner-content2{
+        flex-shrink: 1;
+        margin: 0;
+        width: 100%;
     }
+
+    .baner-content2 img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
     .flower {
         padding-bottom: 1rem;
@@ -441,6 +491,7 @@ body {
     }
 
     .flower-plants {
+        padding: 1rem;
         flex-direction: column;
         margin-bottom: 100px;
     }
@@ -463,8 +514,24 @@ body {
 
     .join-content {
         padding: 1rem;
-        width: 70%;
+        width: 80%;
     }
+
+    .join-content form {
+        width: 100%;
+        max-width: 600px; 
+      }
+
+      
+.forms input,
+.forms button {
+  flex: 1; /* both take equal space */
+  min-width: 0; 
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  box-sizing: border-box;
+}
 
     .join-content h2 {
         font-size: 20px;
